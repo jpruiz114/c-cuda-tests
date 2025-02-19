@@ -126,12 +126,8 @@ int findPath(int m, int n, const int matrix[m][n], const int i, const int j) {
     return maxLength;
 }
 
-int main(int argc, char** argv) {
-    const int matrix[3][3] = {{3, 4, 5}, {3, 2, 6}, {2, 2, 1}};
-
-    const int numRows = sizeof(matrix) / sizeof(matrix[0]);
-    const int numCols = sizeof(matrix[0]) / sizeof(matrix[0][0]);
-
+void solveForMatrix(int m, int n, const int matrix[m][n], const numRows, const numCols)
+{
     int maxLength = 0;
     int length = 0;
 
@@ -145,12 +141,28 @@ int main(int argc, char** argv) {
             if (length > maxLength) {
                 maxLength = length;
             }
-
-            printf("\n");
         }
     }
 
     printf("maxLength: %d\n", maxLength);
+    printf("\n");
+}
+
+int main(int argc, char** argv) {
+    const int matrix1[3][3] = {{9, 9, 4}, {6, 6, 8}, {2, 2, 1}};
+    const int numRows1 = sizeof(matrix1) / sizeof(matrix1[0]);
+    const int numCols1 = sizeof(matrix1[0]) / sizeof(matrix1[0][0]);
+    solveForMatrix(3, 3, matrix1, numRows1, numCols1);
+
+    const int matrix2[3][3] = {{3, 4, 5}, {3, 2, 6}, {2, 2, 1}};
+    const int numRows2 = sizeof(matrix2) / sizeof(matrix2[0]);
+    const int numCols2 = sizeof(matrix2[0]) / sizeof(matrix2[0][0]);
+    solveForMatrix(3, 3, matrix2, numRows2, numCols2);
+
+    const int matrix3[1][1] = {{1}};
+    const int numRows3 = sizeof(matrix3) / sizeof(matrix3[0]);
+    const int numCols3 = sizeof(matrix3[0]) / sizeof(matrix3[0][0]);
+    solveForMatrix(3, 3, matrix3, numRows3, numCols3);
 
     return 0;
 }

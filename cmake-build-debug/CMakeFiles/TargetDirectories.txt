@@ -1,3 +1,0 @@
-/home/derp/dev/jp/cuda-tests/cmake-build-debug/CMakeFiles/cuda_tests.dir
-/home/derp/dev/jp/cuda-tests/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/derp/dev/jp/cuda-tests/cmake-build-debug/CMakeFiles/rebuild_cache.dir

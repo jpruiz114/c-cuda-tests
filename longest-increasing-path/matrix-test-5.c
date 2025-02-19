@@ -77,8 +77,6 @@ ArrayWithInfo filterNeighbours(int m, int n, const int matrix[m][n], const int i
 
     for (int i = 0; i < totalNeighbours; i++) {
         MatrixPosition matrixPosition = neighbours.data[i];
-        //printf("(%d, %d) -> Value: %d\n", matrixPosition.i, matrixPosition.j, matrix[matrixPosition.i][matrixPosition.j]);
-
         if (matrix[matrixPosition.i][matrixPosition.j] > currentMatrixItem) {
             filteredNeighbours[totalFilteredNeighbours++] = matrixPosition;
         }
@@ -126,7 +124,7 @@ int findPath(int m, int n, const int matrix[m][n], const int i, const int j) {
     return maxLength;
 }
 
-void solveForMatrix(int m, int n, const int matrix[m][n], const numRows, const numCols)
+void solveForMatrix(int m, int n, const int matrix[m][n], const int numRows, const int numCols)
 {
     int maxLength = 0;
     int length = 0;
@@ -149,6 +147,8 @@ void solveForMatrix(int m, int n, const int matrix[m][n], const numRows, const n
 }
 
 int main(int argc, char** argv) {
+    // https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/
+
     const int matrix1[3][3] = {{9, 9, 4}, {6, 6, 8}, {2, 2, 1}};
     const int numRows1 = sizeof(matrix1) / sizeof(matrix1[0]);
     const int numCols1 = sizeof(matrix1[0]) / sizeof(matrix1[0][0]);
